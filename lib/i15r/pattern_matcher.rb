@@ -79,7 +79,7 @@ class I15R
             unless original[0] == "'" or original[0] == '"'
               original = %("#{original}")
             end
-            %(#{@i18n_method}("#{key}", :default => #{original.gsub('"', '\"')}))
+            %(#{@i18n_method}("#{key}", :default => "#{original.gsub('"', '\"')}"))
           else
             %(#{@i18n_method}("#{key}"))
           end
